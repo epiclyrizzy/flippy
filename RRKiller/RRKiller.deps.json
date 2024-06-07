@@ -1,0 +1,34 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "RRKiller/1.0.0": {
+        "dependencies": {
+          "ArmDot.Engine.MSBuildTasks": "2023.5.0"
+        },
+        "runtime": {
+          "RRKiller.dll": {}
+        }
+      },
+      "ArmDot.Engine.MSBuildTasks/2023.5.0": {}
+    }
+  },
+  "libraries": {
+    "RRKiller/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ArmDot.Engine.MSBuildTasks/2023.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6W1dQ1G69w6Pz9jAiwE7ItAqBSM1uWHqMLkTbpS0EG7u0cF37xLCg5dCqGamcWj18maYMQ7AgM12zRCEzm3t3w==",
+      "path": "armdot.engine.msbuildtasks/2023.5.0",
+      "hashPath": "armdot.engine.msbuildtasks.2023.5.0.nupkg.sha512"
+    }
+  }
+}
